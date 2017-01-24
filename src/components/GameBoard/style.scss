@@ -1,0 +1,31 @@
+$border: 1px solid red;
+
+.game-of-life-board {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  margin: auto;
+  border: $border;
+
+  &__row {
+    &:after {
+      content: '';
+      display: table;
+      clear: left;
+    }
+  }
+  &__cell {
+    box-sizing: border-box;
+    float: left;
+    width: 10px;
+    height: 10px;
+
+    &:hover {
+      outline: $border;
+    }
+
+    &_live {
+      background-color: #000;
+    }
+  }
+}
